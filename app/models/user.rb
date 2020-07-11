@@ -3,5 +3,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable
 
-  belongs_to :company
+  belongs_to :company, optional: true
 end
