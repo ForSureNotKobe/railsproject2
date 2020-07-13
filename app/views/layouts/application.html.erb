@@ -14,9 +14,15 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <% if current_user.present? %>
+      <%= link_to "Show User Profile", user_path(current_user.id)%>
+      <% if current_user.company.present? %>
+        <%= link_to "Show Company Profile", company_path(current_user.company.id)%>
+      <% else %>
+        <%= link_to "Create Company", new_company_path %>
+      <% end %>
       <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
     <% else %>
-      <%= link_to "Log In", new_user_session_path, :method => :get %>
+      <%= link_to "Log In / Sign up!", new_user_session_path, :method => :get %>
     <% end %>
   </body>
 </html>

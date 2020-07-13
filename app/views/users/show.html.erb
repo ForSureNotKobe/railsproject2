@@ -1,0 +1,17 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h2>
+        <%= @user.name %>
+        <%= @user.id%>
+      </h2>
+      <h1>
+        <% if current_user.company.present?%>
+          Belongs to company with an id of: <%= @user.company.id %>
+        <% end %>
+      </h1>
+      <%= link_to "Edit Personal Data", edit_user_registration_path(current_user)%>
+    </section>
+  </aside>
+<div>

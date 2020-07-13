@@ -1,0 +1,18 @@
+<% provide(:title, @company.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h2>
+        <%= @company.name %>
+        <%= @company.id%>
+      </h2>
+      <h1>
+        <%= @company.vatcode %>
+        <%= @company.city %>
+        <%= @company.address %>
+        <%= @company.postcode%>
+      </h1>
+      <%=link_to 'Edit Company Data', edit_company_path %>
+    </section>
+  </aside>
+<div>

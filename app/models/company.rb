@@ -1,5 +1,5 @@
 class Company < ApplicationRecord
-  validates :name, :vatcode, :adress, :city, :postcode, presence: true
+  validates :name, :vatcode, :address, :city, :postcode, presence: true
 
   has_many :users
 end
