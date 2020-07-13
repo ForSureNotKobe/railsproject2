@@ -12,7 +12,9 @@
         <%= @company.address %>
         <%= @company.postcode%>
       </h1>
-      <%=link_to 'Edit Company Data', edit_company_path %>
+      <%= link_to 'Edit Company Data', edit_company_path %>
+      <%= link_to 'Create New Client Clients', new_company_client_path(@company) %>
+      <%# <%= link_to 'Manage Lessons', #lessons_path %> %>
     </section>
   </aside>
 <div>
