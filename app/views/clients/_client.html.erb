@@ -1,0 +1,12 @@
+<li id="Client-<%= client.id %>>
+      <span class="content">
+          <%= client.name %>
+          <%= client.address %>
+          <button type="button">
+            <%= link_to 'Edit', edit_company_client_path(client.company_id, client) %>
+          </button>
+          <%# <button type="button">
+            <%= link_to 'Delete', client, method :delete %>
+          </button> %>
+      </span>
+</li>

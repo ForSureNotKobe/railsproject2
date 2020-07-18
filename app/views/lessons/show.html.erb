@@ -1,0 +1,10 @@
+<% provide(:title, @lesson.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <% if @company = Company.find(params[:company_id]).lessons.any? %>
+      <ol class="clients">
+        <%= render @lessons %>
+      </ol>
+    <% end %>
+  </aside>
+<div>

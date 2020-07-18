@@ -1,6 +1,6 @@
-<h2>Create Lesson</h2>
+<h2>Edit Lesson</h2>
 
-<%= form_with(model: @lesson, url: company_lessons_path(current_user.company.id), local: true) do |f| %>
+<%= form_with(model: @lesson, url: company_lesson_path(current_user.company.id), local: true) do |f| %>
   <%= render "shared/error_messages", object: f.object %>
 
   <div class="field">
@@ -24,6 +24,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Create" %>
+    <%= f.submit "Edit" %>
   </div>
 <% end %>
